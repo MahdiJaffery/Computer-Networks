@@ -11,7 +11,7 @@ int countVowels(char *word, int end)
 {
     int count = 0;
     for (int i = 0; i < end; i++)
-        if (toLower(word[i]) == 'a' || toLower(word[i]) == 'e' || toLower(word[i]) == 'o' || toLower(word[i]) == 'u')
+        if (toLower(word[i]) == 'a' || toLower(word[i]) == 'e' || toLower(word[i]) == 'i' || toLower(word[i]) == 'o' || toLower(word[i]) == 'u')
             count++;
     return count;
 }
@@ -87,9 +87,15 @@ int main(int argc, char *argv[])
 
             int vowels = countVowels(word, wordIndex);
 
-            reversedWord = reverseWord(word, wordIndex);
-
-            write(writeFile, reversedWord, sizeof(char) * strlen(reversedWord));
+            if (vowels)
+            {
+                reversedWord = reverseWord(word, wordIndex);
+                write(writeFile, reversedWord, sizeof(char) * strlen(reversedWord));
+            }
+            else
+            {
+                write(writeFile, word, strlen(word) * sizeof(char));
+            }
 
             wordIndex = 0;
         }
