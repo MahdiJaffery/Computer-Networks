@@ -1,0 +1,17 @@
+`ls` is used to list all the files in the current directory
+
+`cd` is used to open a directory
+
+`pwd` is used to print the current working directory
+
+`mkdir` is used to create a directory
+
+`rmdir` is used to remove an empty directory
+
+`rm` is used to delete a file
+
+`cp` is used to copy files
+
+`mv` is used to move or rename files
+
+`touch` is used to create a file
