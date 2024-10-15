@@ -33,4 +33,5 @@ def main():
     
     sock.close()
 
-main()
+if __name__ == "__main__":
+    main()
